@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteBase /EasyAdmin/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+#Options All -Indexes
+#ErrorDocument 403 /PhpProject4/error.php
+
+#<Files info.xml>
+#order allow,deny
+#deny from all
+#</Files>
+
+
+#Redirect /PhpProject4/models/ /PhpProject4/file-1.php
+#DirectoryIndex /PhpProject4/models/file-2.php
+
+

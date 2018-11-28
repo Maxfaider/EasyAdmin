@@ -1,0 +1,49 @@
+{
+    "clients": [
+        {
+          "userName": "Lmarck",
+          "operativeSystem": "Windows 10",
+          "featuresSystem": "osxx",
+          "state": "online",
+          "network": {
+              "ip": "192.168.0.5",
+              "mask": "255.255.255.0",
+              "mac": "F0:E1:D2:C3:B4:A5",
+              "description": "red"
+           },
+          "cpu": {
+              "model": "X60",
+              "vendor": "Intel",
+              "mhz": "3.6 Mhz",
+              "core": "2 core",
+              "cache": "-1"
+           },
+          "ram": {
+              "totalMemory": "4000 mb",
+              "totalSwap": "2000 mb"
+           }
+        },
+        {
+          "userName": "Lmarck",
+          "operativeSystem": "Windows 10",
+          "featuresSystem": "osxx",
+          "network": {
+              "ip": "192.168.0.2",
+              "mask": "255.255.255.0",
+              "mac": "F0:E1:D2:C3:B4:A5",
+              "description": "red"
+           },
+          "cpu": {
+              "model": "X60",
+              "vendor": "Intel",
+              "mhz": "3.6 Mhz",
+              "core": "2 core",
+              "cache": "-1"
+           },
+          "ram": {
+              "totalMemory": "4000 mb",
+              "totalSwap": "2000 mb"
+           }
+        }
+   ]
+}

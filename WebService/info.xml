@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EasyAdmin>
+    <version>1.0</version>
+    <author>Alan M.E</author>
+    <contact>allanmarquezes@gmail.com</contact>
+    <description>Sistemas Distibuidos
+        <protocols>Soap</protocols>
+        <function>middleware</function>
+    </description>
+    <platform>PHP 7</platform>
+    <lastModification>10/04/2017</lastModification>
+    <theme>GraphBerry</theme>
+</EasyAdmin>

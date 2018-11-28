@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="scramble"
+   targetNamespace="http://localhost:8080/EasyAdmin/webservice/scramble.wsdl"
+   xmlns="http://schemas.xmlsoap.org/wsdl/"
+   xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+   xmlns:tns="http://localhost:8080/EasyAdmin/webservice/scramble.wsdl"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ 
+   <message name="registerAdminRequest">
+      <part name="json" type="xsd:string"/>
+   </message>
+   <message name="registerAdminResponse">
+      <part name="respuesta" type="xsd:string"/>
+   </message>
+   
+   <message name="loginAdminRequest">
+       <part name="user" type="xsd:string"/>
+       <part name="pass" type="xsd:string"/>
+   </message>
+   <message name="loginAdminResponse">
+      <part name="idAdmin" type="xsd:string"/>
+   </message>
+   
+   <message name="registerClientRequest">
+       <part name="json" type="xsd:string"/>
+       <part name="idAdmin" type="xsd:string"/>
+   </message>
+   <message name="registerClientResponse">
+      <part name="respuesta" type="xsd:string"/>
+   </message>
+   
+   <message name="sendClientRequest">
+       <part name="idAdmin" type="xsd:string"/>
+   </message>
+   <message name="sendClientResponse">
+      <part name="json" type="xsd:string"/>
+   </message>
+   
+    <message name="sendCommandRequest">
+       <part name="idAdmin" type="xsd:string"/>
+       <part name="order" type="xsd:string"/>
+       <part name="ipClient" type="xsd:string"/>
+   </message>
+   <message name="sendCommandResponse">
+      <part name="resultado" type="xsd:string"/>
+   </message>
+   
+   <message name="findOrderRequest">
+       <part name="ipClient" type="xsd:string"/>
+       <part name="idAdmin" type="xsd:string"/>
+   </message>
+   <message name="findOrderResponse">
+      <part name="resultado" type="xsd:string"/>
+   </message>
+   
+   <message name="changeStateRequest">
+       <part name="ipClient" type="xsd:string"/>
+       <part name="idAdmin" type="xsd:string"/>
+   </message>
+   <message name="changeStateResponse">
+      <part name="resultado" type="xsd:string"/>
+   </message>
+   
+   <portType name="scramblePortType">
+      <operation name="registerAdmin">
+         <input message="tns:registerAdminRequest"/>
+         <output message="tns:registerAdminResponse"/>
+      </operation>
+      
+      <operation name="loginAdmin">
+         <input message="tns:loginAdminRequest"/>
+         <output message="tns:loginAdminResponse"/>
+      </operation>
+      
+      <operation name="registerClient">
+         <input message="tns:registerClientRequest"/>
+         <output message="tns:registerClientResponse"/>
+      </operation>
+      
+      <operation name="sendClient">
+         <input message="tns:sendClientRequest"/>
+         <output message="tns:sendClientResponse"/>
+      </operation>
+      
+      <operation name="sendCommand">
+         <input message="tns:sendCommandRequest"/>
+         <output message="tns:sendCommandResponse"/>
+      </operation>
+      
+      <operation name="findOrder">
+         <input message="tns:findOrderRequest"/>
+         <output message="tns:findOrderResponse"/>
+      </operation>
+      
+      <operation name="changeState">
+         <input message="tns:changeStateRequest"/>
+         <output message="tns:changeStateResponse"/>
+      </operation>
+   </portType>
+
+
+   <binding name="scrambleBinding" type="tns:scramblePortType">
+      <soap:binding style="rpc"
+         transport="http://schemas.xmlsoap.org/soap/http"/>
+      <operation name="registerAdmin">
+         <soap:operation soapAction="urn:registerAdmin"/>
+         <input>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:registerAdmin"
+               use="encoded"/>
+         </input>
+		
+         <output>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:registerAdmin"
+               use="encoded"/>
+         </output>
+      </operation>
+      
+      <operation name="loginAdmin">
+         <soap:operation soapAction="urn:loginAdmin"/>
+         <input>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:loginAdmin"
+               use="encoded"/>
+         </input>
+		
+         <output>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:loginAdmin"
+               use="encoded"/>
+         </output>
+      </operation>  
+      
+      <operation name="registerClient">
+         <soap:operation soapAction="urn:registerClient"/>
+         <input>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:registerClient"
+               use="encoded"/>
+         </input>
+		
+         <output>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:registerClient"
+               use="encoded"/>
+         </output>
+      </operation>  
+      
+      <operation name="sendClient">
+         <soap:operation soapAction="urn:sendClient"/>
+         <input>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:sendClient"
+               use="encoded"/>
+         </input>
+		
+         <output>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:sendClient"
+               use="encoded"/>
+         </output>
+      </operation> 
+      
+      <operation name="sendCommand">
+         <soap:operation soapAction="urn:sendCommand"/>
+         <input>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:sendCommand"
+               use="encoded"/>
+         </input>
+		
+         <output>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:sendCommand"
+               use="encoded"/>
+         </output>
+      </operation>
+      
+      <operation name="findOrder">
+         <soap:operation soapAction="urn:findOrder"/>
+         <input>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:findOrder"
+               use="encoded"/>
+         </input>
+		
+         <output>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:findOrder"
+               use="encoded"/>
+         </output>
+      </operation>
+      
+      <operation name="changeState">
+         <soap:operation soapAction="urn:changeState"/>
+         <input>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:changeState"
+               use="encoded"/>
+         </input>
+		
+         <output>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:changeState"
+               use="encoded"/>
+         </output>
+      </operation>
+   </binding>
+
+   <service name="service">
+      <documentation>WSDL File for HelloService</documentation>
+      <port binding="tns:scrambleBinding" name="scramblePort">
+         <soap:address
+            location="http://localhost:8080/EasyAdmin/webservice/service.php" />
+      </port>
+   </service>
+</definitions>
